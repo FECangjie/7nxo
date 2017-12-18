@@ -1,0 +1,17 @@
+<div class="findmusic">
+		<div class="find-menu">
+			<router-link class="menu-list" tag="div" to="/coco/category">
+				<div class="menu-list-div">分类</div>
+			</router-link>
+			<router-link class="menu-list" tag="div" to="/coco/recommend">
+				<div class="menu-list-div">推荐</div>
+			</router-link>
+			<router-link class="menu-list" tag="div" to="/coco/nice">
+				<div class="menu-list-div">优选</div>
+			</router-link>
+			<router-link class="menu-list" tag="div" to="/coco/rank">
+				<div class="menu-list-div">榜单</div>
+			</router-link>
+		</div>
+		<router-view></router-view>
+	</div>

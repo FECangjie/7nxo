@@ -1,0 +1,46 @@
+.findmusic {
+    position:fixed;
+    overflow: auto;
+    top: 3.125rem;
+    bottom: 2.875rem;
+    left: 0;
+    right: 0;
+    z-index: 11;
+    background: #fafafa;
+    -webkit-overflow-scrolling: touch;
+    .find-menu {
+        // position: fixed;
+        width: 100%;
+        height: 3.125rem;
+        // margin-bottom: 0.625rem;
+        line-height: 3.125rem;
+        background: #fff;
+        overflow: hidden;
+        display: flex;
+        .menu-list {
+            flex: 1;
+            width: 25%;
+            overflow: hidden;
+            text-align: center;
+            cursor: pointer;
+            font-size: 1rem;
+            position: relative;
+            font-weight: 500;
+            &.router-link-active {
+                color: #C20C0C;
+                &:after {
+                    content: '';
+                    position: absolute;
+                    background: #C20C0C;
+                    bottom: 0;
+                    height: 0.125rem;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            &:active {
+                background: $list_active;
+            }
+        }
+    }
+}

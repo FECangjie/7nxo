@@ -1,0 +1,14 @@
+<div class="header">
+  <div class="header-warpper">
+    <!-- <i class="menu icon1-menu" @click=""></i> -->
+
+    <!-- <router-link tag="i" to="/search"> -->
+      <i class="search icon1-search"  @click.stop="showSearch"></i>
+      <span class="logo">CoCo</span>
+      <span class="right"><i class="icon-heart"></i></span>
+    <!-- </router-link> -->
+    <!-- <Counter class="counter"></Counter> -->
+  </div>
+
+
+</div>

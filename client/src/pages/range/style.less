@@ -1,0 +1,57 @@
+.range {
+  width:90%;
+  height:100%;
+  display:flex;
+  margin: 0 auto;
+  align-items:center;
+  display:flex;
+  box-sizing:border-box;
+  padding:0 0.625rem;
+  .rangeicon {
+    font-size:0.875rem;
+    color:#666;
+    margin-right:0.625rem;
+  }
+
+  .span-left {
+    font-size:0.75rem;
+    color:#666;
+    margin-right:0.625rem;
+  }
+
+  .duration {
+    flex:1;
+    height:0.125rem;
+    border-radius:0.0625rem;
+    background: #f3fafa;
+    margin:0 auto;
+    font-size:0;
+    cursor:pointer;
+    position:relative;
+    .currentProgress {
+      display:inline-block;
+      width:0%;
+      height:0.125rem;
+      background:#C20C0C;
+      float:left;
+    }
+
+    .ball {
+      position:absolute;
+      width:0.875rem;
+      height:0.875rem;
+      left:-0.4375rem;
+      background:#C20C0C;
+      border-radius:50%;
+      cursor:pointer;
+    }
+
+  }
+
+  .span-right {
+    font-size:0.75rem;
+    color:#666;
+    margin-left:0.625rem;
+  }
+
+}
