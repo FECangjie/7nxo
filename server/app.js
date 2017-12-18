@@ -1,11 +1,14 @@
 'use strict';
 
 var express = require('express');
+var fs = require('fs');
 var timeout = require('connect-timeout');
 var path = require('path');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var AV = require('leanengine');
+
+var APIS = require(path.join(__dirname, './api/get.js'));
 
 // 加载云函数定义，你可以将云函数拆分到多个文件方便管理，但需要在主文件中加载它们
 require('./cloud');
@@ -40,25 +43,7 @@ app.get('/', function(req, res) {
 app.use('/todos', require('./routes/todos'));
 
 // API
-const APIS = [
-  '/voice/tuijian.json',
-  '/voice/play.json',
-  '/voice/fenlei_list.json',
-  '/voice/rank_list.json'
-]
-APIS.forEach(o => {
-  app.get(o, function(req,res){
-    res.status(200)
-    var rootPath = process.cwd()
-    var simplePath = req.originalUrl.split('?')[0].replace('.json', '')
-    var temp = simplePath
-    var apiPath = rootPath + '/api' + temp + '.js'
-    console.log(apiPath)
-    var api = require(apiPath)
-    res.send(api(null, req.body || req.query))
-    // res.json(questions)
-  });
-})
+app.use(APIS)
 
 
 app.use(function(req, res, next) {
