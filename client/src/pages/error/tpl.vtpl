@@ -1,5 +1,0 @@
-<div class="error-page">
-  <div class="title">{{ title }}</div>
-  <i class="icon1-warning"></i>
-  <div class="msg">{{ msg }}</div>
-</div>
