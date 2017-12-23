@@ -18,6 +18,9 @@ const APIS_CONFIG =
   LOGIN: {
     url: '/api/login.json',
   },
+  INFO: {
+    url: '/info.json',
+  },
 }
 
 module.exports = APIS_CONFIG

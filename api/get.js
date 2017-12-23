@@ -75,8 +75,6 @@ router.get(APIS.GET_PLAY.url, function(req, res){
     }
   });
 
-
-
   var hostName = req.hostname;
   console.log("hostName: %s", hostName);
   res.status(200)
@@ -89,17 +87,22 @@ router.get(APIS.GET_PLAY.url, function(req, res){
   // res.json(questions)
 });
 
-router.get(APIS.GET_FENLEI.url, function(req, res){
+router.get(APIS.INFO.url, function(req, res){
   var hostName = req.hostname;
   console.log("hostName: %s", hostName);
   res.status(200)
   var rootPath = process.cwd()
   var simplePath = req.originalUrl.split('?')[0].replace('.json', '')
-  var temp = simplePath
-  var apiPath = rootPath + '/sql' + temp + '.js'
-  var api = require(apiPath)
-  res.send(api(null, req.body || req.query))
-  // res.json(questions)
+  var apiPath = rootPath + '/sql' + simplePath + '.json'
+  fs.readFile(apiPath, {flag: 'r+', encoding: 'utf8'}, function(err, data){
+    if (err) {
+      res.send({err: 0})
+      console.log(err);
+    } else {
+      console.log(data);
+      res.send(data)
+    }
+  });
 });
 
 router.get(APIS.GET_RANK.url, function(req, res){
