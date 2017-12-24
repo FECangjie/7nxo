@@ -99,10 +99,49 @@ router.get(APIS.INFO.url, function(req, res){
       res.send({err: 0})
       console.log(err);
     } else {
-      console.log(data);
+      console.log(JSON.parse(data));
       res.send(data)
     }
   });
+});
+
+// 标签
+router.get(APIS.ME_TAGS.url, function(req, res){
+  var query = req.query
+  var hostName = req.hostname;
+  res.status(200)
+  var rootPath = process.cwd()
+  var simplePath = req.originalUrl.split('?')[0].replace('.json', '')
+  var apiPath = rootPath + '/sql' + simplePath + '.json'
+  fs.readFile(apiPath, {flag: 'r+', encoding: 'utf8'}, function(err, data){
+    if (err) {
+      res.send({err: 0})
+      console.log(err);
+    } else {
+      var obj = JSON.parse(data)
+      if (query.id) {
+        var tags = obj.data.tags[query.index].tags
+        tags.map((o, i) => {
+          if (o.id == query.id) {
+            console.log(o.count)
+            o.count++
+            return o
+          }
+        })
+        var str = JSON.stringify(obj)
+        res.send(obj)
+        fs.writeFile(apiPath, str, {}, function (err) {
+         if(err) {
+          console.error(err);
+          } else {
+             console.log('写入成功');
+          }
+        });
+      } else {
+        res.send(data)
+      }
+    }
+  })
 });
 
 router.get(APIS.GET_RANK.url, function(req, res){

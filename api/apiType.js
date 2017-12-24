@@ -19,7 +19,10 @@ const APIS_CONFIG =
     url: '/api/login.json',
   },
   INFO: {
-    url: '/info.json',
+    url: '/me/info.json',
+  },
+  ME_TAGS: {
+    url: '/me/tags.json',
   },
 }
 
