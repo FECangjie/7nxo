@@ -4,15 +4,15 @@
             "title": "个人标签",
             "tags": [{
                 "name": "前端开发",
-                "count": 100,
+                "count": 678,
                 "id": 1
             }, {
                 "name": "90后",
-                "count": 1,
+                "count": 113,
                 "id": 2
             }, {
                 "name": "文艺青年",
-                "count": 0,
+                "count": 56,
                 "id": 3
             }, {
                 "name": "单身",
@@ -20,7 +20,7 @@
                 "id": 4
             }, {
                 "name": "IT民工",
-                "count": 1,
+                "count": 0,
                 "id": 5
             }, {
                 "name": "努力加班",
@@ -35,19 +35,19 @@
             "title": "工作技能",
             "tags": [{
                 "name": "Javascript",
-                "count": 100,
+                "count": 237,
                 "id": 1
             }, {
                 "name": "html5/css3",
-                "count": 80,
+                "count": 220,
                 "id": 2
             }, {
                 "name": "React",
-                "count": 42,
+                "count": 142,
                 "id": 3
             }, {
                 "name": "Vue",
-                "count": 36,
+                "count": 96,
                 "id": 4
             }, {
                 "name": "redux",
@@ -78,11 +78,11 @@
             "title": "生活标签",
             "tags": [{
                 "name": "音乐",
-                "count": 101,
+                "count": 187,
                 "id": 1
             }, {
                 "name": "钢琴／电子琴",
-                "count": 66,
+                "count": 106,
                 "id": 2
             }, {
                 "name": "烟卷DJ",
