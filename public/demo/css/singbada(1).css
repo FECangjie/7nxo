@@ -1044,7 +1044,7 @@ body {
     }
     .banner {
         height: 560px!important;
-        background-size: 100%;
+        background-size: cover;
     }
     .header {
         height: 70px
