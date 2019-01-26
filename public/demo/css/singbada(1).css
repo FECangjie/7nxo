@@ -314,7 +314,7 @@ body {
 }
 
 .article {
-    padding-bottom: 2em;
+    padding-bottom: 0em;
     font-size: 18px;
     color: #333;
     line-height: 1.75em
@@ -608,7 +608,7 @@ body {
 }
 
 .article {
-    padding-bottom: 2em;
+    padding-bottom: 0em;
     font-size: 18px;
     color: #333;
     line-height: 1.75em
@@ -940,7 +940,7 @@ body {
 @media (min-width:768px) and (max-width:980px) {
     .banner {
         height: 470px!important;
-        background-size: auto 100%
+        background-size: 100%
     }
     .header {
         height: 50px
@@ -1044,7 +1044,7 @@ body {
     }
     .banner {
         height: 560px!important;
-        background-size: auto 100%
+        background-size: 100%;
     }
     .header {
         height: 70px
