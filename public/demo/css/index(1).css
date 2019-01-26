@@ -627,7 +627,7 @@ body {
         height: inherit;
         height: 3pc;
         background-position: 0 center;
-        background-size: auto 100%
+        background-size: 100% auto
     }
 
     .header .nav {
@@ -729,7 +729,7 @@ body {
         height: inherit;
         height: 3pc;
         background-position: 0 center;
-        background-size: auto 100%
+        background-size: 100% auto 
     }
 
     .header .nav {

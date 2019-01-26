@@ -628,6 +628,7 @@ body {
         height: 48px;
         width: 65px;
         background-size: auto 100%;
+        background-size: 100% auto;
         background-position: 0 center
     }
     .header .nav {
@@ -677,6 +678,7 @@ body {
         height: 48px;
         width: 80px;
         background-size: auto 100%;
+        background-size: 100% auto;
         background-position: 0 center
     }
     .header .nav {
