@@ -55,8 +55,7 @@ app.use(function(req, res, next) {
 
   } else if (!res.headersSent) {
     console.log('接到页面' + req.originalUrl + '的请求')
-    next();
-    // res.render('index');
+    res.render('index');
   }
 });
 
