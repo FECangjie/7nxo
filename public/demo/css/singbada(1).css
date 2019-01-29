@@ -835,7 +835,7 @@ body {
 
 @media screen and (max-width:768px) {
     .banner {
-        height: 420px!important;
+        /* height: 420px!important; */
         background-size: 100% 100%
     }
     .header {
@@ -941,7 +941,7 @@ body {
 
 @media (min-width:768px) and (max-width:980px) {
     .banner {
-        height: 470px!important;
+        /* height: 470px!important; */
         background-size: 100% 100%
     }
     .header {
@@ -1045,7 +1045,7 @@ body {
         width: 960px
     }
     .banner {
-        height: 550px!important;
+        /* height: 550px!important; */
         background-size: 100% 100%;
     }
     .header {
